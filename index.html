@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-HK">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="香港涼茶鋪風格的互動煲涼茶小遊戲，揀茶、認材料、掌握火候。"
+    />
+    <meta property="og:title" content="茶記涼茶研習所" />
+    <meta
+      property="og:description"
+      content="用香港涼茶鋪風格玩一局煲涼茶小遊戲。"
+    />
+    <meta property="og:image" content="./assets/hong-kong-herbal-shop.webp" />
+    <title>茶記涼茶研習所</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#app">跳到遊戲</a>
+    <div class="shop-backdrop" aria-hidden="true"></div>
+    <div class="texture" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand-lockup" aria-label="茶記涼茶研習所">
+        <span class="brand-mark">茶</span>
+        <span>
+          <strong>茶記涼茶研習所</strong>
+          <small>Hong Kong herbal tea game</small>
+        </span>
+      </div>
+      <nav aria-label="主要導覽">
+        <a href="#tea-menu">揀涼茶</a>
+        <a href="#game-panel">開始煲</a>
+        <a href="#guide">材料圖鑑</a>
+      </nav>
+    </header>
+
+    <main id="app" class="page-shell">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="kicker">香港涼茶鋪風格</p>
+          <h1 id="hero-title">揀一杯涼茶，煲到剛剛好。</h1>
+          <p>
+            認材料、快手處理、控制水量同火候。茶姨會看住你，每一步都計分。
+          </p>
+          <a class="primary-action" href="#tea-menu">開始揀茶</a>
+        </div>
+
+        <aside class="coach-panel" aria-label="茶姨提示">
+          <div class="coach-face" aria-hidden="true">
+            <span></span>
+          </div>
+          <div>
+            <strong>茶姨提你</strong>
+            <p id="coach-line">
+              正宗玩法不是亂按。先睇材料，再記火候，最後先收爐。
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="tea-menu" class="menu-section" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <h2 id="menu-title">今日煲邊款？</h2>
+          <p>九款常見涼茶，每款有自己的材料、火候和故事。</p>
+        </div>
+        <div id="tea-grid" class="tea-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="game-panel" class="game-panel" aria-live="polite">
+        <div class="screen-head">
+          <div>
+            <p id="stage-label" class="stage-label">未開始</p>
+            <h2 id="stage-title">先揀一款涼茶</h2>
+          </div>
+          <button id="reset-button" class="ghost-button" type="button">重新開始</button>
+        </div>
+
+        <div id="history-screen" class="stage active-stage">
+          <div class="empty-state">
+            <div class="stamp-block">茶</div>
+            <p>請先在上方選一款涼茶，茶姨會帶你入材料房。</p>
+          </div>
+        </div>
+
+        <div id="gather-screen" class="stage"></div>
+        <div id="prep-screen" class="stage"></div>
+        <div id="cook-screen" class="stage"></div>
+        <div id="result-screen" class="stage"></div>
+      </section>
+
+      <section id="guide" class="guide-section" aria-labelledby="guide-title">
+        <div class="section-heading">
+          <h2 id="guide-title">材料圖鑑</h2>
+          <p>每個材料都有圖像提示。認得越快，煲茶越穩。</p>
+        </div>
+        <div id="ingredient-guide" class="ingredient-guide"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made for a Hong Kong herbal tea mini-game. Original generated visuals, no official cooking-game assets used.</p>
+    </footer>
+
+    <script src="./src/app.js" type="module"></script>
+  </body>
+</html>

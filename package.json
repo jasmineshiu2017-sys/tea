@@ -1,0 +1,10 @@
+{
+  "name": "tea",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hong Kong herbal tea mini-game website.",
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "build": "node -e \"console.log('Static site ready')\""
+  }
+}
